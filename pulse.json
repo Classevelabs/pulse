@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-08-23T20:27:06.813Z",
-  "run": "32664436433",
-  "all_ok": false,
+  "checked_at": "2026-08-23T20:29:00.477Z",
+  "run": "32664527218",
+  "all_ok": true,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 169,
+      "latency_ms": 321,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 263,
+      "latency_ms": 207,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 142,
+      "latency_ms": 191,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 692,
+      "latency_ms": 838,
       "detail": null
     },
     {
       "target": "supabase_auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 281,
+      "latency_ms": 392,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 768,
+      "latency_ms": 598,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 167,
+      "latency_ms": 229,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": false,
+      "ok": true,
       "status": null,
       "latency_ms": null,
-      "detail": "Earslate-0.5.2.apk: unreachable; Folio-PDF-1.1.5.apk: unreachable"
+      "detail": "13 artifacts ok"
     }
   ]
 }

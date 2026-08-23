@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-08-23T20:27:06.813Z",
+  "run": "32664436433",
+  "all_ok": false,
+  "results": [
+    {
+      "target": "site",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 169,
+      "detail": null
+    },
+    {
+      "target": "products",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 263,
+      "detail": null
+    },
+    {
+      "target": "api",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 142,
+      "detail": null
+    },
+    {
+      "target": "api_ready",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 692,
+      "detail": null
+    },
+    {
+      "target": "supabase_auth",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 281,
+      "detail": null
+    },
+    {
+      "target": "deck",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 768,
+      "detail": null
+    },
+    {
+      "target": "play_listing",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 167,
+      "detail": null
+    },
+    {
+      "target": "downloads",
+      "ok": false,
+      "status": null,
+      "latency_ms": null,
+      "detail": "Earslate-0.5.2.apk: unreachable; Folio-PDF-1.1.5.apk: unreachable"
+    }
+  ]
+}

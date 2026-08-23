@@ -50,7 +50,7 @@ const results = await Promise.all([
 try {
   const reg = await (await fetch('https://classeve.com/products.json', { signal: AbortSignal.timeout(15000) })).json();
   const urls = [];
-  for (const p of Object.values(reg.products ?? {})) for (const pl of p.platforms ?? []) for (const a of pl.artifacts ?? []) if (a.url) urls.push(a.url);
+  for (const p of Object.values(reg.products ?? {})) for (const pl of p.platforms ?? []) for (const a of pl.artifacts ?? []) if (a.url) urls.push(new URL(a.url, 'https://classeve.com').toString());
   const misses = [];
   for (const u of urls.slice(0, 20)) {
     try {

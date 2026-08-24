@@ -54,8 +54,15 @@ try {
   const misses = [];
   for (const u of urls.slice(0, 20)) {
     try {
-      const r = await fetch(u, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(20000) });
-      if (r.status !== 200) misses.push(`${u.split('/').pop()}: HTTP ${r.status}`);
+      // redirect: 'manual'. Following the redirect fetches the asset, and GitHub
+      // counts that as a download — this probe ran every five minutes against all
+      // thirteen registered artifacts and put ~150 fake downloads on each of them
+      // inside its first day, which is most of what the public counters showed.
+      // A 302 from the release URL already proves the release and asset exist
+      // (GitHub 404s an unknown asset), so stopping at the redirect verifies the
+      // same thing and leaves the counters measuring real people.
+      const r = await fetch(u, { method: 'HEAD', redirect: 'manual', signal: AbortSignal.timeout(20000) });
+      if (r.status !== 200 && r.status !== 302) misses.push(`${u.split('/').pop()}: HTTP ${r.status}`);
     } catch {
       misses.push(`${u.split('/').pop()}: unreachable`);
     }

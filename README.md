@@ -2,7 +2,7 @@
 
 Outside witness for [classeve.com](https://classeve.com). Every five minutes,
 from GitHub's infrastructure, this repository checks that the public ClassEve
-surfaces answer — the website, the API health endpoints, the Supabase auth
+surfaces answer — the website, the API health endpoints, the sign-in
 service, the published download artifacts, and the Play listing — and commits
 the result to [`pulse.json`](./pulse.json).
 

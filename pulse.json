@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-08-28T14:40:22.875Z",
-  "run": "33181331812",
-  "all_ok": true,
+  "checked_at": "2026-08-28T14:55:20.478Z",
+  "run": "33182562939",
+  "all_ok": false,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 223,
+      "latency_ms": 365,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 159,
+      "latency_ms": 296,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 226,
+      "latency_ms": 214,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 681,
+      "latency_ms": 1008,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 573,
+      "latency_ms": 561,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 375,
+      "latency_ms": 409,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 248,
+      "latency_ms": 335,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": true,
+      "ok": false,
       "status": null,
       "latency_ms": null,
-      "detail": "13 artifacts ok"
+      "detail": "Lven-Instant-android-0.9.33.apk: HTTP 404; Lven-Instant-android-0.9.33-armeabi-v7a.apk: HTTP 404"
     }
   ]
 }

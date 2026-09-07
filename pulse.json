@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-09-07T14:30:59.705Z",
-  "run": "34133315516",
-  "all_ok": false,
+  "checked_at": "2026-09-07T14:45:21.517Z",
+  "run": "34134669676",
+  "all_ok": true,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 659,
+      "latency_ms": 678,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 336,
+      "latency_ms": 493,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 742,
+      "latency_ms": 562,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 2885,
+      "latency_ms": 1005,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 758,
+      "latency_ms": 877,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 618,
+      "latency_ms": 670,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 329,
+      "latency_ms": 530,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": false,
+      "ok": true,
       "status": null,
       "latency_ms": null,
-      "detail": "lven-instant_0.8.34_amd64.deb: HTTP 504"
+      "detail": "14 artifacts ok"
     }
   ]
 }

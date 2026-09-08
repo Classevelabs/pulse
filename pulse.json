@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-09-08T13:01:23.338Z",
-  "run": "34229428726",
-  "all_ok": true,
+  "checked_at": "2026-09-08T13:15:45.555Z",
+  "run": "34230866547",
+  "all_ok": false,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 377,
+      "latency_ms": 226,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 248,
+      "latency_ms": 193,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 296,
+      "latency_ms": 271,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 741,
+      "latency_ms": 826,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 641,
+      "latency_ms": 512,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 480,
+      "latency_ms": 355,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 308,
+      "latency_ms": 274,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": true,
+      "ok": false,
       "status": null,
       "latency_ms": null,
-      "detail": "14 artifacts ok"
+      "detail": "lven-instant-linux-0.8.34.tar.gz: HTTP 500"
     }
   ]
 }

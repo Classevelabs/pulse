@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-09-10T01:30:59.696Z",
-  "run": "34425775702",
-  "all_ok": false,
+  "checked_at": "2026-09-10T01:45:46.866Z",
+  "run": "34426752445",
+  "all_ok": true,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 462,
+      "latency_ms": 182,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 265,
+      "latency_ms": 177,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 278,
+      "latency_ms": 201,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 968,
+      "latency_ms": 737,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 614,
+      "latency_ms": 526,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 400,
+      "latency_ms": 378,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 296,
+      "latency_ms": 236,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": false,
+      "ok": true,
       "status": null,
       "latency_ms": null,
-      "detail": "Lven-Cloud-1.0.42.apk: HTTP 500"
+      "detail": "14 artifacts ok"
     }
   ]
 }

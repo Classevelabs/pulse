@@ -1,55 +1,55 @@
 {
-  "checked_at": "2026-09-11T15:36:08.847Z",
-  "run": "34617074161",
+  "checked_at": "2026-09-11T15:51:13.460Z",
+  "run": "34618564990",
   "all_ok": true,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 202,
+      "latency_ms": 377,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 147,
+      "latency_ms": 217,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 206,
+      "latency_ms": 311,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 702,
+      "latency_ms": 778,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 698,
+      "latency_ms": 551,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 346,
+      "latency_ms": 428,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 243,
+      "latency_ms": 351,
       "detail": null
     },
     {

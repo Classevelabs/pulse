@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-09-12T11:00:41.389Z",
-  "run": "34689899860",
-  "all_ok": false,
+  "checked_at": "2026-09-12T11:15:27.981Z",
+  "run": "34690568698",
+  "all_ok": true,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 205,
+      "latency_ms": 233,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 155,
+      "latency_ms": 185,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 170,
+      "latency_ms": 237,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 672,
+      "latency_ms": 607,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 663,
+      "latency_ms": 500,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 2749,
+      "latency_ms": 391,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 228,
+      "latency_ms": 240,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": false,
+      "ok": true,
       "status": null,
       "latency_ms": null,
-      "detail": "Folio-PDF-1.1.5.apk: HTTP 409"
+      "detail": "14 artifacts ok"
     }
   ]
 }

@@ -1,55 +1,55 @@
 {
-  "checked_at": "2026-09-14T14:32:03.580Z",
-  "run": "34856141602",
+  "checked_at": "2026-09-14T14:46:17.818Z",
+  "run": "34857725573",
   "all_ok": false,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 171,
+      "latency_ms": 200,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 120,
+      "latency_ms": 146,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 523,
+      "latency_ms": 163,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 818,
+      "latency_ms": 902,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 818,
+      "latency_ms": 865,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 296,
+      "latency_ms": 299,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 177,
+      "latency_ms": 216,
       "detail": null
     },
     {
@@ -57,7 +57,7 @@
       "ok": false,
       "status": null,
       "latency_ms": null,
-      "detail": "lven-cloud_0.1.22_amd64.deb: HTTP 504"
+      "detail": "lven-cloud-linux-0.1.22.tar.gz: HTTP 504"
     }
   ]
 }

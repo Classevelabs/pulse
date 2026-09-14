@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-09-14T14:16:07.424Z",
-  "run": "34854482895",
-  "all_ok": true,
+  "checked_at": "2026-09-14T14:32:03.580Z",
+  "run": "34856141602",
+  "all_ok": false,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 215,
+      "latency_ms": 171,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 158,
+      "latency_ms": 120,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 191,
+      "latency_ms": 523,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 776,
+      "latency_ms": 818,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 1533,
+      "latency_ms": 818,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 295,
+      "latency_ms": 296,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 168,
+      "latency_ms": 177,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": true,
+      "ok": false,
       "status": null,
       "latency_ms": null,
-      "detail": "14 artifacts ok"
+      "detail": "lven-cloud_0.1.22_amd64.deb: HTTP 504"
     }
   ]
 }

@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-09-15T14:21:38.123Z",
-  "run": "34981068736",
-  "all_ok": true,
+  "checked_at": "2026-09-15T14:28:22.133Z",
+  "run": "34981846804",
+  "all_ok": false,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 383,
+      "latency_ms": 382,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 236,
+      "latency_ms": 255,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 283,
+      "latency_ms": 255,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 1071,
+      "latency_ms": 768,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 755,
+      "latency_ms": 520,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 430,
+      "latency_ms": 481,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 280,
+      "latency_ms": 249,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": true,
+      "ok": false,
       "status": null,
       "latency_ms": null,
-      "detail": "14 artifacts ok"
+      "detail": "lven-instant-0.8.34-x86_64.AppImage: HTTP 500"
     }
   ]
 }

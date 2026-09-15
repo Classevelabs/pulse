@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-09-15T19:41:27.287Z",
-  "run": "35015096761",
-  "all_ok": false,
+  "checked_at": "2026-09-15T19:56:35.179Z",
+  "run": "35016515365",
+  "all_ok": true,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 325,
+      "latency_ms": 201,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 157,
+      "latency_ms": 115,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 188,
+      "latency_ms": 124,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": true,
       "status": 200,
-      "latency_ms": 917,
+      "latency_ms": 929,
       "detail": null
     },
     {
       "target": "auth",
       "ok": true,
       "status": 200,
-      "latency_ms": 734,
+      "latency_ms": 642,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 298,
+      "latency_ms": 554,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 173,
+      "latency_ms": 174,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": false,
+      "ok": true,
       "status": null,
       "latency_ms": null,
-      "detail": "rex.exe: HTTP 500"
+      "detail": "15 artifacts ok"
     }
   ]
 }

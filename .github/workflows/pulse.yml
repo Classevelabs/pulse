@@ -6,7 +6,9 @@
 name: pulse
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    # Minute 2 of every five, not 0: GitHub delays and drops scheduled runs
+    # hardest on the hour and the five-minute marks, and */5 sat on both.
+    - cron: '2-57/5 * * * *'
   workflow_dispatch:
 
 permissions:

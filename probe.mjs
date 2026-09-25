@@ -6,10 +6,6 @@ import { createHmac } from 'node:crypto';
 import { writeFileSync } from 'node:fs';
 
 const DECK = process.env.DECK_ORIGIN ?? 'https://deck.classeve.com';
-// Auth health endpoint lives in a repo variable, not in this file: the repo is
-// public so Actions minutes stay free, and the provider hostname is not
-// something we publish. Unset locally just skips that probe.
-const AUTH_HEALTH = process.env.AUTH_HEALTH_URL ?? '';
 const SECRET = process.env.PULSE_HMAC_SECRET ?? '';
 
 async function probe(target, url, opts = {}) {
@@ -45,9 +41,7 @@ const results = await Promise.all([
   probe('products', 'https://classeve.com/products.json', { json: true }),
   probe('api', 'https://api.classeve.com/v1/health'),
   probe('api_ready', 'https://api.classeve.com/v1/health/ready', { expect: [200] }),
-  AUTH_HEALTH
-    ? probe('auth', AUTH_HEALTH, { headers: { apikey: process.env.AUTH_ANON_KEY ?? '' } })
-    : Promise.resolve({ target: 'auth', ok: true, status: null, latency_ms: null, detail: 'not configured' }),
+  probe('sign_in', 'https://api.classeve.com/v1/session/nonce', { expect: [200] }),
   probe('deck', `${DECK}/api/health`),
   probe('play_listing', 'https://play.google.com/store/apps/details?id=com.lven.assist', { expect: [200] }),
 ]);

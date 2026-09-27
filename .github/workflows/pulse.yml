@@ -31,8 +31,6 @@ jobs:
         env:
           PULSE_HMAC_SECRET: ${{ secrets.PULSE_HMAC_SECRET }}
           DECK_ORIGIN: ${{ vars.DECK_ORIGIN }}
-          AUTH_HEALTH_URL: ${{ vars.AUTH_HEALTH_URL }}
-          AUTH_ANON_KEY: ${{ vars.AUTH_ANON_KEY }}
         run: node probe.mjs
       - name: Archive the result
         if: always()

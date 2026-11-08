@@ -1,63 +1,63 @@
 {
-  "checked_at": "2026-11-08T02:17:35.048Z",
-  "run": "42437891958",
+  "checked_at": "2026-11-08T09:12:02.834Z",
+  "run": "42465986113",
   "all_ok": false,
   "results": [
     {
       "target": "site",
       "ok": true,
       "status": 200,
-      "latency_ms": 318,
+      "latency_ms": 320,
       "detail": null
     },
     {
       "target": "products",
       "ok": true,
       "status": 200,
-      "latency_ms": 202,
+      "latency_ms": 185,
       "detail": null
     },
     {
       "target": "api",
       "ok": true,
       "status": 200,
-      "latency_ms": 283,
+      "latency_ms": 218,
       "detail": null
     },
     {
       "target": "api_ready",
       "ok": false,
       "status": 503,
-      "latency_ms": 1378,
+      "latency_ms": 739,
       "detail": null
     },
     {
       "target": "sign_in",
       "ok": true,
       "status": 200,
-      "latency_ms": 282,
+      "latency_ms": 216,
       "detail": null
     },
     {
       "target": "deck",
       "ok": true,
       "status": 200,
-      "latency_ms": 390,
+      "latency_ms": 383,
       "detail": null
     },
     {
       "target": "play_listing",
       "ok": true,
       "status": 200,
-      "latency_ms": 277,
+      "latency_ms": 253,
       "detail": null
     },
     {
       "target": "downloads",
-      "ok": true,
+      "ok": false,
       "status": null,
       "latency_ms": null,
-      "detail": "14 artifacts ok"
+      "detail": "rex.exe: HTTP 504; Lven-Instant-windows-0.8.42-Setup.exe: HTTP 504; lven-instant_0.8.42_amd64.deb: HTTP 504"
     }
   ]
 }

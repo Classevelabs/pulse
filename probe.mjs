@@ -46,25 +46,41 @@ const results = await Promise.all([
   probe('play_listing', 'https://play.google.com/store/apps/details?id=com.lven.assist', { expect: [200] }),
 ]);
 
-// Every registered artifact URL must resolve.
+// Every registered artifact must be there. A file on GitHub is looked up in its
+// release through GitHub's API: asking for the file's own address counts as a
+// download, even stopped at the redirect. On 2026-11-17 every file the site
+// listed gained exactly one GitHub download each time the Deck checked it that
+// way, which is most of what the public counters showed.
+const GITHUB_ASSET = /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/releases\/download\/([^/]+)\/([^/?#]+)$/;
+const ghHeaders = { Accept: 'application/vnd.github+json', 'User-Agent': 'classeve-pulse (github actions witness)', ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) };
 try {
   const reg = await (await fetch('https://classeve.com/products.json', { signal: AbortSignal.timeout(15000) })).json();
   const urls = [];
   for (const p of Object.values(reg.products ?? {})) for (const pl of p.platforms ?? []) for (const a of pl.artifacts ?? []) if (a.url) urls.push(new URL(a.url, 'https://classeve.com').toString());
   const misses = [];
+  const releases = new Map();
   for (const u of urls.slice(0, 20)) {
+    const name = u.split('/').pop();
+    const asset = u.match(GITHUB_ASSET);
     try {
-      // redirect: 'manual'. Following the redirect fetches the asset, and GitHub
-      // counts that as a download — this probe ran every five minutes against all
-      // thirteen registered artifacts and put ~150 fake downloads on each of them
-      // inside its first day, which is most of what the public counters showed.
-      // A 302 from the release URL already proves the release and asset exist
-      // (GitHub 404s an unknown asset), so stopping at the redirect verifies the
-      // same thing and leaves the counters measuring real people.
+      if (asset) {
+        const [, owner, repo, tag, file] = asset;
+        const key = `${owner}/${repo}/${tag}`;
+        if (!releases.has(key)) {
+          const r = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/tags/${tag}`, { headers: ghHeaders, signal: AbortSignal.timeout(20000) });
+          releases.set(key, r.status === 200 ? { status: 200, names: new Set(((await r.json()).assets ?? []).map((a) => a.name)) } : { status: r.status, names: null });
+        }
+        const rel = releases.get(key);
+        // GitHub limiting how often it is asked is not a missing file.
+        if (rel.status === 403 || rel.status === 429) continue;
+        if (!rel.names) misses.push(`${name}: release ${decodeURIComponent(tag)} HTTP ${rel.status}`);
+        else if (!rel.names.has(decodeURIComponent(file))) misses.push(`${name}: not in release ${decodeURIComponent(tag)}`);
+        continue;
+      }
       const r = await fetch(u, { method: 'HEAD', redirect: 'manual', signal: AbortSignal.timeout(20000) });
-      if (r.status !== 200 && r.status !== 302) misses.push(`${u.split('/').pop()}: HTTP ${r.status}`);
+      if (r.status !== 200 && r.status !== 302) misses.push(`${name}: HTTP ${r.status}`);
     } catch {
-      misses.push(`${u.split('/').pop()}: unreachable`);
+      misses.push(`${name}: unreachable`);
     }
   }
   results.push({ target: 'downloads', ok: misses.length === 0, status: null, latency_ms: null, detail: misses.length ? misses.slice(0, 3).join('; ').slice(0, 200) : `${urls.length} artifacts ok` });
